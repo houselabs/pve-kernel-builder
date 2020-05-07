@@ -8,7 +8,7 @@ RUN apt-get update &&\
     apt-get install -y libpve-common-perl &&\
     cd /usr/src/ &&\
     git clone git://git.proxmox.com/git/pve-kernel.git &&\
-    cd pve-kernel
+    cd pve-kernel &&\
     git checkout origin/${PVE_BRANCH} &&\
     make update_modules &&\
     git submodule update --init --recursive
